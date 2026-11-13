@@ -1,5 +1,4 @@
 #include<iostream>
-
 class v17
 {
     int sz;
@@ -17,3 +16,12 @@ public:
     double get(int n) const {return elem[n]; }
     void set(int n, double v) {elem[n]=v;}
 };
+
+
+
+int main() {
+    v17 vec(5);
+    vec.set(-5, 111);
+    std::cout << vec.get(-5) << std::endl;
+    return 0;
+}
