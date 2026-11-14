@@ -45,6 +45,10 @@ public:
     void reserve(int newalloc);
     void resize(int newsize, T val = T());
     void push_back(const T& val);
+    T* begin() { return elem; }
+    T* end() { return elem + sz; }
+    const T* begin() const { return elem; }
+    const T* end() const { return elem + sz; }
 };
 
 

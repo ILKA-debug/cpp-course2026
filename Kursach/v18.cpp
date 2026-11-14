@@ -28,10 +28,13 @@ v18::v18(v18&& a) :sz{a.sz}, elem{a.elem}
 
 v18& v18::operator=(v18&& a)
 {
-    delete[] elem;
-    elem = a.elem;
-    sz = a.sz;
-    a.elem = nullptr;
-    a.sz = 0;
+    if (&a != this)
+    {
+        delete[] elem;
+        elem = a.elem;
+        sz = a.sz;
+        a.elem = nullptr;
+        a.sz = 0;
+    }
     return *this;
 }
